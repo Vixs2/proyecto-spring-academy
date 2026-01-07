@@ -1,6 +1,5 @@
 package com.example.cashcard;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,7 +11,6 @@ import java.util.Optional; // ¡Asegúrate de agregar este import!
 @RequestMapping("/cashcards")
 public class CashCardController {
    
-   @Autowired
    private final CashCardRepository cashCardRepository;
 
    // El constructor inyecta el repositorio correctamente
