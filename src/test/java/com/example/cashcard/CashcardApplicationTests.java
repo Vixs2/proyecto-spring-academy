@@ -54,4 +54,11 @@ class CashCardApplicationTests {
    assertThat(getResponse.getStatusCode()).isEqualTo(HttpStatus.OK);
 
     }
+
+    //Metodo para comprobar la URL cuando un cliente hace una peticion GET.
+    @Test
+    void shouldReturnAllCashCardsWhenListIsRequested() {
+        ResponseEntity<String> response = restTemplate.getForEntity("/cashcards", String.class);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+    }
 }
